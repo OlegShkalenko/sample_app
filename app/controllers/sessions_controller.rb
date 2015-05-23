@@ -1,5 +1,11 @@
 class SessionsController < ApplicationController
+<<<<<<< HEAD
   def new
+=======
+
+  def new
+
+>>>>>>> sign-in-out
   end
 
   def create
@@ -17,4 +23,8 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_url
   end
+<<<<<<< HEAD
+=======
+
+>>>>>>> sign-in-out
 end
