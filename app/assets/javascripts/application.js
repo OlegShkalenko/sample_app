@@ -13,9 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-<<<<<<< HEAD
-//= require turbolinks.js.coffee
-=======
-//= require turbolinks
->>>>>>> sign-in-out
 //= require_tree .
