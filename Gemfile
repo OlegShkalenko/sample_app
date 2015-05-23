@@ -10,6 +10,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'pg'
 gem 'strong_parameters'
+gem 'turbolinks'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,6 +34,8 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 
