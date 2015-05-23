@@ -16,7 +16,7 @@ gem 'strong_parameters'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  gem 'turbolinks'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -33,6 +33,8 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 
