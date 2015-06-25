@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 class User < ActiveRecord::Base.send(:include, ActiveModel::ForbiddenAttributesProtection)
-=======
-class User < ActiveRecord::Base
->>>>>>> sign-in-out
+
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }
