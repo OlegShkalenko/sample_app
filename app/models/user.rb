@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base.send(:include, ActiveModel::ForbiddenAttributesProtection)
-
+  has_many :microposts, dependent: :destroy
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }
@@ -17,6 +17,11 @@ class User < ActiveRecord::Base.send(:include, ActiveModel::ForbiddenAttributesP
 
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  def feed
+    # Это предварительное решение. См. полную реализацию в "Following users".
+    Micropost.where("user_id = ?", id)
   end
 
   private
