@@ -49,3 +49,7 @@ RSpec.configure do |config|
   config.include Capybara::DSL
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 end
+
+Capybara.configure do |config|
+  config.match = :prefer_exact
+end
